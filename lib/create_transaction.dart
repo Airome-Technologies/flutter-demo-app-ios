@@ -38,10 +38,6 @@ class _CreateTransactionState extends State<CreateTransaction> {
   }
 
   Future createTransaction() async {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Creating transaction')),
-    );
-
     // 1. Creating transaction
     //
     // =========================================
@@ -52,8 +48,6 @@ class _CreateTransactionState extends State<CreateTransaction> {
     String transactionID = await APIHelper.createTransaction(
         '# Transfer to ${accountController.text}\n**Amount:** ${amountController.text}${commentsText}',
         widget.user.userId);
-
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
     // 2. Downloading transaction
     Future<PCTransaction> futureTransaction = PCTransactionsManager.getTransaction(transactionID, widget.user);
