@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - pcsdk (1.0.0):
+    - Flutter
+    - PCSDKModule
+  - PCSDKModule (5.4.444)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - pcsdk (from `.symlinks/plugins/pcsdk/ios`)
+  - PCSDKModule (from `https://repo.payconfirm.org/git/ios/pcsdk.git`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  pcsdk:
+    :path: ".symlinks/plugins/pcsdk/ios"
+  PCSDKModule:
+    :git: https://repo.payconfirm.org/git/ios/pcsdk.git
+
+CHECKOUT OPTIONS:
+  PCSDKModule:
+    :commit: 6e96a5415b4be141f9e0230ac61618a0b085b9f0
+    :git: https://repo.payconfirm.org/git/ios/pcsdk.git
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  pcsdk: c005756125d2bc1f7f0717cfd92ecfd9c3e57cd1
+  PCSDKModule: d1774120542c8d05c79f9aa20a56d35d63c71feb
+
+PODFILE CHECKSUM: 1577dc7f8113b5709e1bc87edb1b45f03a1406b7
+
+COCOAPODS: 1.10.1
