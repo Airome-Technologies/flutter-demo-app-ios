@@ -38,12 +38,21 @@ class _CreateTransactionState extends State<CreateTransaction> {
   }
 
   Future createTransaction() async {
-    // 1. Creating transaction
-    //
-    // =========================================
-    // [WARNING] DO NOT USE IN PRODUCTION BUILDS
-    // =========================================
-    //
+    /**
+     * 1. Creating transaction
+     *
+     * =========================================
+     * [WARNING] DO NOT USE IN PRODUCTION BUILDS
+     * =========================================
+     *
+     * Transaction data should be sent to Application back-end.
+     * And PC transaction should be created by Appliction back-end via
+     * PC Server's API
+     *
+     * see PC docs for proper using scenario
+     * https://repo.payconfirm.org/server/doc/v5.3/arch_and_principles/#document-signing-flow
+     *
+     */ 
     String commentsText = commentsController.text.isEmpty ? "" : "\n\nComments:\n\n${commentsController.text}";
     String transactionID = await APIHelper.createTransaction(
         '# Transfer to ${accountController.text}\n**Amount:** ${amountController.text}${commentsText}',

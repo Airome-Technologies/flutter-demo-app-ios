@@ -66,11 +66,14 @@ class _MyAppState extends State<MyApp> {
        * [WARNING] DO NOT USE IN PRODUCTION BUILDS
        * =========================================
        * 
-       * Usually a client gets this data via QR code. For demo purpose
+       * Usually a client gets this data via QR code or JSON data. For demo purpose
        * we create the new User using an internal PC Server API.
        * Using this method in production builds is unsafe and not recommended.
+       *
+       * see PC docs for proper using scenario
+       * https://repo.payconfirm.org/server/doc/v5.3/arch_and_principles/#mobile-app-personalization-and-keys-generation
        * 
-       * */
+       */
       String userJSON = await APIHelper.createUser();
 
       // 2. Importing user
@@ -86,7 +89,7 @@ class _MyAppState extends State<MyApp> {
 
       // 4. Registering
       //
-      // We keeps push token empty in this Demo app
+      // We keeps push-token empty in this Demo app
       await PCUsersManager.register(user, '');
 
       // 5. Storing
